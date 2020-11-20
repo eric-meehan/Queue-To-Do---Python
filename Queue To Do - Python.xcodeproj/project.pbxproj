@@ -6,10 +6,6 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		0714DABB25682A71007B4068 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0714DABA25682A71007B4068 /* main.cpp */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		0714DAB525682A71007B4068 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -24,7 +20,8 @@
 
 /* Begin PBXFileReference section */
 		0714DAB725682A71007B4068 /* Queue To Do - Python */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Queue To Do - Python"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0714DABA25682A71007B4068 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0714DAC325682AB2007B4068 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0714DAC425682AD6007B4068 /* main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +54,8 @@
 		0714DAB925682A71007B4068 /* Queue To Do - Python */ = {
 			isa = PBXGroup;
 			children = (
-				0714DABA25682A71007B4068 /* main.cpp */,
+				0714DAC325682AB2007B4068 /* README.md */,
+				0714DAC425682AD6007B4068 /* main.py */,
 			);
 			path = "Queue To Do - Python";
 			sourceTree = "<group>";
@@ -118,7 +116,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0714DABB25682A71007B4068 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
