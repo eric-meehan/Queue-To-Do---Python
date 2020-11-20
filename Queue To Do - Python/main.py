@@ -5,6 +5,8 @@ Eric Meehan
 Queue To Do
 """
 
+import sys
+
 def SequentialXOR(n):
     # Executing an XOR over sequential numbers starting with 1 returns a pattern of n, 1, n+1, 0
     # This function simulates this pattern
@@ -25,14 +27,28 @@ def XORRows(Start, End):
     return SequentialXOR(Start) ^ SequentialXOR(End)
     
 def main():
+    # Users may specify the start position and line length through command line arguments
+    if len(sys.argv) > 1:
+        try:
+            # Get Start from the first argument
+            Start = int(sys.argv[1])
+            # Get Length from the second argument
+            Length = int(sys.argv[2])
+        except:
+            print("Invalid argument - using default parameters.")
+            Start = 17
+            Length = 4
+    # Alternatively, the default values of 17 and 4 will be used for Start and Length respectively
+    else:
+        Start = 17
+        Length = 4
     # Generate the table
-    table = Table(17, 4)
-    print(table)
+    table = Table(Start, Length)
     # Create the cumulative XOR checksum
     CumulativeXOR = 0
     # Use the SequentialXOR function on each row, combining the result with the CumulativeXOR
-    for i in range(4):
-        CumulativeXOR ^= XORRows((17 + (4 * i)), table[i])
+    for i in range(Length):
+        CumulativeXOR ^= XORRows((Start + (Length * i)), table[i])
     # Print the result
     print(CumulativeXOR)
 
